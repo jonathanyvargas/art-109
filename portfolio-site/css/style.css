@@ -8,9 +8,23 @@ Off-white     #f6f6f6
 */
 
 /* GLOBAL STYLES */
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  html, body {
+    height: 100%;
+  }
 
 body {
     background: #f6f6f6;
+    margin: 0;
 }
 
 /* links */
@@ -32,15 +46,29 @@ footer a:hover {
     color: #f6f6f6;
 }
 
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
 /* HOME */
 .home {
-    background: url(../images/bg-home-office-studio.jpg) no-repeat;
+    background: url(../images/girl-listening-to-sunflowers-2000px.png) no-repeat;
     background-size: cover;
 }
 .home .content-wrapper{
     background: rgb(255 255 255 / 0.9);
 }
 /* RESUME*/
+
+.resume header::before {
+    background: url(../images/girl-listening-to-sunflowers-2000px.png) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 500px;
+}
 
 /* Profile */
 
@@ -54,4 +82,14 @@ footer a:hover {
 footer {
     background: #222;
     color: #d3d4d6;
+}
+.socials {
+   list-style: none; 
+   padding: 0;
+}
+.socials li {
+    display: inline-block;
+}
+.socials img {
+    width: 32px;
 }
