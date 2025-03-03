@@ -13,6 +13,7 @@ Off-white     #f6f6f6
 */
 html {
     box-sizing: border-box;
+    font-size: 62.5%; /*set font size to 10px */
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -25,6 +26,24 @@ html {
 body {
     background: #f6f6f6;
     margin: 0;
+    font-family: "Space Mono", monospace;
+    font-size: 1.6rem;
+}
+h1, h2, h3 {
+    font-family: "Major Mono Display", monospace;
+    margin: 0;
+}
+h1 {
+    font-size: 5.4rem;
+    line-height: 1.8;
+}
+h2 {
+    font-size: 3.6;
+    line-height: 1.8;
+}
+h3 {
+    font-size: 1.8;
+    line-height: 1.8;
 }
 
 /* links */
@@ -44,6 +63,13 @@ footer a:hover {
 .btn {
     background: #3c8453;
     color: #f6f6f6;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: .2em;
+    line-height: 1;
+    border-radius: 4px;
 }
 
 .content-wrapper {
@@ -85,22 +111,46 @@ footer a:hover {
     position: fixed;
     top: 5px;
     left: 5px;
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 1200px;){
+    .download-link {
+        position:absolute;
+    }
 }
 
-/* Profile */
-
+/* Projects */
 .project-item {
-    display: flow-root;
     margin: 30px 0;
 }
 .project-item img {
     width: 300px;
-    float: left;
-    margin-right: 20px;
 }
-
-/* Projects */
-
+@media screen and (min-width:860px) {
+    .project-item {
+        display: flow-root;
+    }
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width:650px) and (max-width:859px) {
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+    .project-item img {
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px;){
+    .project-item img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
 /* Work Expererience */
 
 .work-item {
@@ -108,9 +158,21 @@ footer a:hover {
     grid-template-columns: 300px 1fr;
     column-gap: 20px;
 }
+.work-details p {
+    margin: 0;
+}
+.work-summary p:first-child {
+    margin-top: 30px;
+}
 
 /* Education */
-
+.education-item {
+    margin: 30px;
+    margin-bottom: 30px;
+}
+.education-item p {
+    margin: 0;
+}
 /* FOOTER */
 footer {
     background: #222;
