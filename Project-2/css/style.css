@@ -110,9 +110,277 @@ html {
  h2 {
     display: inline-block; /* Prevents stretching */
     font-size: 2.4em;
+    transition: transform 0.3s ease-in-out;
+    cursor: none;
  }
 
  h2:hover {
-    font-size: 2.8em;
-    cursor: pointer;
+    transform: scale(1.5); /* Scales the text by 1.5 times its normal size */
  }
+
+ /* Custom pointer styles */
+ .custom-pointer {
+    position: absolute;
+    visibility: hidden; /* Initially hidden */
+    font-size: 24px;
+    pointer-events: none; /* Prevents the custom pointer from blocking interactions */
+    transition: transform 0.1s ease, font-family 0.3s ease;
+}
+
+/* Pointer move behavior when hovering over specific h2 classes */
+h2.londrina-outline-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Londrina Outline', sans-serif;
+    color: #000000; /* Customize the color */
+}
+
+h2.barriecito-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Barriecito', sans-serif;
+}
+
+h2.mystery-quest-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Mystery Quest', sans-serif;
+}
+
+h2.monoton-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Monoton', sans-serif;
+}
+
+h2.major-mono-display-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Major Mono Display', sans-serif;
+}
+
+h2.rubik-puddles-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Rubik Puddles', sans-serif;
+}
+
+h2.give-you-glory-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Give You Glory', sans-serif;
+}
+
+h2.eater-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Eater', sans-serif;
+}
+
+h2.rubik-glitch-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Rubik Glitch', sans-serif;
+}
+
+h2.rubik-distressed-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Rubik Distressed', sans-serif;
+}
+
+h2.mea-culpa-regular:hover ~ .custom-pointer {
+    visibility: visible;
+    font-family: 'Mea Culpa', sans-serif;
+}
+
+/* Wendy Pop-up overlay */
+.wendy-popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wendy Pop-up content */
+.wendy-popup-content {
+  background: rgb(0, 0, 0);
+  padding: 0;
+  border-radius: 12px;
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+  height: 350px;
+}
+
+/* Wendy Close button */
+.wendy-close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Bella Pop-up overlay */
+.bella-popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bella Pop-up content */
+.bella-popup-content {
+  background: rgb(0, 0, 0);
+  padding: 0;
+  border-radius: 12px;
+  position: relative;
+  width: 41%;
+}
+
+/* Bella Close button */
+.bella-close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Breezy Pop-up overlay */
+.breezy-popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Breezy Pop-up content */
+.breezy-popup-content {
+  background: rgb(0, 0, 0);
+  padding: 0;
+  border-radius: 12px;
+  position: relative;
+  width: 41%;
+}
+
+/* Breezy Close button */
+.breezy-close-btn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+
+
+/* Fullscreen static video GIF Overlay */
+.gif-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gif-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fullscreen Brontie Image Overlay */
+.brontie-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Image Brontie Styling */
+.brontie-image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Brontie Close Button */
+.brontie-close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  color: black;
+  border: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Fullscreen Lindsay Image Overlay */
+.lindsay-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Image Lindsay Styling */
+.lindsay-image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Lindsay Close Button */
+.lindsay-close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}

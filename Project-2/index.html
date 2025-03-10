@@ -13,16 +13,66 @@
     <header>
         <h1>burnedbridges</h1>
     </header>
-    <h2 class="londrina-outline-regular">Teresa</h2><br>
-    <h2 class="barriecito-regular">Yesenia</h2><br>
-    <h2 class="mystery-quest-regular">Liz</h2><br>
-    <h2 class="monoton-regular">Margaret</h2><br>
-    <h2 class="major-mono-display-regular">Evelyn</h2><br>
-    <h2 class="rubik-puddles-regular">Wendy</h2><br>
-    <h2 class="give-you-glory-regular">Lindsay</h2><br>
-    <h2 class="eater-regular">Brontie</h2><br>
-    <h2 class="rubik-glitch-regular">Breezy</h2><br>
-    <h2 class="rubik-distressed-regular">Zoe</h2><br>
-    <h2 class="mea-culpa-regular">Bella</h2><br>
+    <h2 class="londrina-outline-regular" onclick="showGIF()">Teresa</h2><br>
+    <h2 class="barriecito-regular" onclick="showGIF()">Yesenia</h2><br>
+    <h2 class="mystery-quest-regular" onclick="showGIF()">Liz</h2><br>
+    <h2 class="monoton-regular" onclick="showGIF()">Margaret</h2><br>
+    <h2 class="major-mono-display-regular" onclick="showGIF()">Evelyn</h2><br>
+    <h2 class="rubik-puddles-regular" onclick="openWendyPopup()">Wendy</h2><br>
+    <h2 class="give-you-glory-regular" onclick="showLindsayImage()">Lindsay</h2><br>
+    <h2 class="eater-regular" onclick="showBrontieImage()">Brontie</h2><br>
+    <h2 class="rubik-glitch-regular" onclick="openBreezyPopup()">Breezy</h2><br>
+    <h2 class="rubik-distressed-regular" onclick="showGIF()">Zoe</h2><br>
+    <h2 class="mea-culpa-regular" onclick="openBellaPopup()">Bella</h2><br>
+    
+    <div class="custom-pointer" id="customPointer">reminisce</div>
+
+    <div class="wendy-popup-overlay" id="wendy-popup">
+        <div class="wendy-popup-content">
+            <span class="wendy-close-btn" onclick="closeWendyPopup()">&times;</span>
+            <div class="wendy-song">
+                <iframe style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/track/1uWprL0egmr1IHpT1J1FdR?utm_source=generator&theme=0" 
+                    width="100%" height="352" frameBorder="0" 
+                    allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="bella-popup-overlay" id="bella-popup">
+        <div class="bella-popup-content">
+            <span class="bella-close-btn" onclick="closeBellaPopup()">&times;</span>
+            <div class="bella-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1BDoDgyL5Hc?si=qgI-Dllx7y1YGN5f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="breezy-popup-overlay" id="breezy-popup">
+        <div class="breezy-popup-content">
+            <span class="breezy-close-btn" onclick="closeBreezyPopup()">&times;</span>
+            <div class="breezy-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WX6jPxA3LII?si=M_QBTy_CSifU1fkX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="gif-overlay" id="gifOverlay">
+        <img src="images/static-video.gif" alt="Static Video">
+    </div>
+
+    <div class="brontie-image-overlay" id="brontie-imageOverlay">
+        <button class="brontie-close-btn" onclick="closeBrontieImage()">✖</button>
+        <img src="images/brontie-drawing.jpg" alt="Brontie Drawing">
+    </div>
+
+    <div class="lindsay-image-overlay" id="lindsay-imageOverlay">
+        <button class="lindsay-close-btn" onclick="closeLindsayImage()">✖</button>
+        <img src="images/me-and-lindsay.JPG" alt="Me and Lindsay">
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
