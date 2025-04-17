@@ -1,0 +1,353 @@
+/*
+COLOR PALETTE
+Dark green    #3c8453
+Sandy beige   #bcaa96
+Dark gray     #222222
+Light gray    #d3d4d6
+Off-white     #f6f6f6
+*/
+
+/* GLOBAL STYLES */
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*set font size to 10px */
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+body {
+    background: #f6f6f6;
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    font-size: 1.6rem;
+}
+
+/* Basic styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    /* Green background */
+    color: #fff;
+}
+
+/* Logo styling */
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, text-decoration 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e0e0e0;
+    /* Lighter color for active/hover */
+    background-color: #1c7430;
+    /* Darker green background on hover */
+    border-radius: 4px;
+    /* Optional: rounded corners */
+}
+
+/* Menu toggle button for mobile view */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #28a745;
+        /* Green background for mobile view */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+h1, h2, h3 {
+    font-family: "Major Mono Display", monospace;
+    margin: 0;
+}
+h1 {
+    font-size: 5.4rem;
+    line-height: 1.2;
+}
+h2 {
+    font-size: 3.6;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+h3 {
+    font-size: 1.8;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+/* links */
+a {
+    color: #3c8453;
+}
+a:hover {
+    color: #bcaa96;
+    text-decoration: none;
+}
+footer a {
+    color: #bcaa96;
+}
+footer a:hover {
+    color: #3c8453;
+}
+.btn {
+    background: #3c8453;
+    color: #f6f6f6;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: .2em;
+    line-height: 1;
+    border-radius: 4px;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+/* HOME */
+.home {
+    background: url(../images/girl-listening-to-sunflowers-2000px.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.home .content-wrapper{
+    flex: 1 0 auto;
+}
+.content-bg {
+    background: rgb(255 255 255 / 0.9);
+    padding: 30px;
+}
+@media screen and (max-width:650){
+    .home .content-wrapper{
+        padding: 10px;
+    }
+    .content-bg {
+        padding: 20px;
+    }
+}
+/* RESUME*/
+
+.resume header::before {
+    background: url(../images/girl-listening-to-sunflowers-2000px.png) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 500px;
+}
+.resume-section {
+    margin-bottom: 50px;
+}
+.resume-section h2 {
+    border-bottom: 2px dashed #d3d4d6;
+}
+.download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 1200px){
+    .download-link {
+        position:absolute;
+    }
+}
+@media screen and (max-width:660px){
+    .resume header::before{
+        height: 200px;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2.6rem;
+    }
+    
+}
+/* Projects */
+.projects header::before {
+    background: url(../images/girl-listening-to-sunflowers-2000px.png) center;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 500px;
+}
+.project-item {
+    margin: 30px 0;
+}
+.project-item img {
+    width: 300px;
+}
+@media screen and (min-width:860px){
+    .project-item {
+        display: flow-root;
+    }
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width:650px) and (max-width:859px){
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+    .project-item img {
+        width: 100%;
+    }
+}
+@media screen and (max-width:400px){
+    .project-item img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Work Expererience */
+
+.work-item {
+    margin: 30px 0;
+}
+.work-details p {
+    margin: 0;
+}
+
+@media screen and (min-width:860px) {
+    .work-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 20px;
+    }
+    .work-summary p:first-child {
+        margin-top: 30px;
+    }
+}
+
+/* Education */
+.education-item {
+    margin: 30px;
+    margin-bottom: 30px;
+}
+.education-item p {
+    margin: 0;
+}
+/* FOOTER */
+footer {
+    background: #222;
+    color: #d3d4d6;
+}
+.socials {
+   list-style: none; 
+   padding: 0;
+}
+.socials li {
+    display: inline-block;
+    margin-left: 10px;
+
+}
+.socials img {
+    width: 32px;
+}
+.socials img:hover {
+    opacity: 0.5;
+}
+@media screen and (min-width:820px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px; 
+    }
+}
+@media screen and (max-width:819px){
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+/* Project 1 snes */
+
+.project-1-page, body, html {
+    color: white;
+    pointer-events: none;
+}
+
+.project-1-page, body, html {
+    padding-left: 1%;
+    padding-top: .5%;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    pointer-events: auto;
+}
