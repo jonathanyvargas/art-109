@@ -332,14 +332,10 @@ footer {
 
 /* Project 1 snes */
 
-.project-1-page, body, html {
+.project-1-page {
+    padding-left: 0%;
+    padding-top: 0%;
     color: white;
-    pointer-events: none;
-}
-
-.project-1-page, body, html {
-    padding-left: 1%;
-    padding-top: .5%;
 }
 
 canvas {
