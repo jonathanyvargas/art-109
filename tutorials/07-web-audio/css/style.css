@@ -1,0 +1,41 @@
+/* Project 2 Sunflower */
+
+body.project-2-longing {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Optional background color */
+}
+
+body.project-2-longing img {
+    height: 100vh;
+    width: auto;
+    object-fit: contain;
+    animation: slideIn 5s ease-in-out forwards;
+    transform: translateX(-60vw); /* Start off-screen to the left */
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0); /* Move to the left edge of the viewport */
+    }
+}
+
+/* buttons */
+
+#play-button, #pause-button {
+    z-index: 1;
+    position: absolute;
+    background-color: #e69beb;
+    color: whitesmoke;
+    border: none;
+    visibility: hidden;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
