@@ -335,15 +335,15 @@ footer {
 
 /* Project 1 snes */
 
-.project-1-page {
+/* .project-1-page {
     padding-left: 1%;
     padding-top: 1%;
     color: white;
     pointer-events: none;
 
-}
+} */
 
-canvas {
+/* canvas {
     width: 100%;
     height: 100%;
     position:absolute;
@@ -351,7 +351,7 @@ canvas {
     left: 0%;
     z-index: -1;
     pointer-events: auto;
-}
+} */
 
 /* Project 2 Sunflower */
 
