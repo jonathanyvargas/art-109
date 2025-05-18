@@ -24,7 +24,7 @@ const animationNames = {
     'Killer-Instinct': 'Play-Killer-Instinct',
     'Power': 'Power-on',
     'Reset': 'Reset-game',
-    'Light-glow': 'Light-change'
+    'Point': 'Light-glow'
 };
 
 function init() {

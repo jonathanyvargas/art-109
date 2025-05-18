@@ -11,6 +11,14 @@ Off-white     #f6f6f6
 /* 
   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
+
+/* FONTS*/
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; /*set font size to 10px */
@@ -120,20 +128,21 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: "Major Mono Display", monospace;
-    margin: 0;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 h1 {
-    font-size: 5.4rem;
+    font-size: 1.8rem;
     line-height: 1.2;
 }
 h2 {
-    font-size: 3.6;
+    font-size: 1.6;
     line-height: 1.2;
     margin-top: 20px;
 }
 h3 {
-    font-size: 1.8;
+    font-size: 1.4;
     line-height: 1.2;
     margin-top: 20px;
 }
@@ -335,15 +344,15 @@ footer {
 
 /* Project 1 snes */
 
-/* .project-1-page {
-    padding-left: 1%;
-    padding-top: 1%;
+.project-1-page {
+    padding-left: 40%;
+    padding-top: 0;
     color: white;
     pointer-events: none;
 
-} */
+}
 
-/* canvas {
+canvas {
     width: 100%;
     height: 100%;
     position:absolute;
@@ -351,7 +360,9 @@ footer {
     left: 0%;
     z-index: -1;
     pointer-events: auto;
-} */
+}
+
+
 
 /* Project 2 Sunflower */
 
